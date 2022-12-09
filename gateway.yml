@@ -7,3 +7,14 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+zuul:
+  ignoredServices: '*'
+  routes:
+    customer:
+      path: /customer/**
+      serviceId: customer
+    fraud:
+      path: /fraud/**
+      serviceId: fraud
+    
+  
