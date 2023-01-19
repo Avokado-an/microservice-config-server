@@ -32,3 +32,11 @@ spring:
           uri: lb://FOOD-SERVER
           predicates:
             - Path=/food/**
+        - id: client-aim-server
+          uri: lb://CLIENT-AIM-SERVER
+          predicates:
+            - Path=/monthly-aim/**
+        - id: daily-diet-server
+          uri: lb://DAILY-DIET-SERVER
+          predicates:
+            - Path=/daily-diet/**
