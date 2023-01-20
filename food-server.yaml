@@ -17,7 +17,7 @@ spring:
       authentication-database: admin
       username: root
       password: password
-      database: food
+      database: food-db
       port: 27017
       host: localhost
       auto-index-creation: true
