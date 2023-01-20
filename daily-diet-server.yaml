@@ -17,7 +17,7 @@ spring:
       authentication-database: admin
       username: root
       password: password
-      database: demo
+      database: daily-diet-db
       port: 27017
       host: localhost
       auto-index-creation: true
