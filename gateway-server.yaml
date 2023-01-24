@@ -22,7 +22,7 @@ spring:
             client-id: macros-gateway-client
             client-secret: GA2GS6zMfYHoYltpOSoOMcgQpBCiaAVo
             authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+            redirect-uri: "http://localhost:8070/login/oauth/code/keycloak"
   cloud:
     gateway:
       routes:
