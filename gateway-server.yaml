@@ -9,6 +9,20 @@ eureka:
 spring:
   application:
     name: gateway-server
+  security:
+    oauth2:
+      client:
+        provider:
+          my-keycloak-provider:
+            issuer-uri: http://localhost:8070/realms/macros-realm
+        registration:
+          keycloak-spring-gateway-client:
+            provider: my-keycloak-provider
+            scope: openid
+            client-id: macros-gateway-client
+            client-secret: GA2GS6zMfYHoYltpOSoOMcgQpBCiaAVo
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://localhost:8070/login/oauth/code/keycloakk"
   cloud:
     gateway:
       routes:
