@@ -23,7 +23,7 @@ spring:
             provider: my-keycloak-provider
             scope: openid
             client-id: macros-gateway-client
-            client-secret: GA2GS6zMfYHoYltpOSoOMcgQpBCiaAVo
+            client-secret: KgHWIcm429s1Z59x9U6C39tcFlLWBlP5
             authorization-grant-type: authorization_code
   cloud:
     gateway:
