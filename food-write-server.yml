@@ -31,9 +31,9 @@ spring:
       host: localhost
       auto-index-creation: true
     cloud:
-    stream:
-      bindings:
-        producer-out-0:
-          destination: food-write-operation
-          consumer:
-            use-native-decoding: true
+      stream:
+        bindings:
+          producer-out-0:
+            destination: food-write-operation
+            consumer:
+              use-native-decoding: true
