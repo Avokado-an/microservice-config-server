@@ -30,10 +30,18 @@ spring:
       port: 27017
       host: localhost
       auto-index-creation: true
-    cloud:
-      stream:
-        bindings:
-          producer-out-0:
-            destination: food-write-operation
-            consumer:
-              use-native-decoding: true
+  cloud:
+    stream:
+      bindings:
+        producer-out-0:
+          destination: food-write-operation
+          consumer:
+            use-native-decoding: true
+    kafka:
+      bindings:
+        producer-out-0:
+          producer:
+            configuration:
+              value.serializer: com.bahdanau.food.dto.converter.KafkaMessageSerializer
+      binder:
+        brokers: localhost:9092
