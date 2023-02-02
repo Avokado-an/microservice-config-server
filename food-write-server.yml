@@ -1,0 +1,32 @@
+server:
+  port: 8093
+
+eureka:
+  client:
+    server-url:
+      default-zone: http://localhost:8761/eureka
+
+logstash:
+  host: localhost
+
+spring:
+  application:
+    name: food-write-server
+  security:
+    oauth2:
+      resourceserver:
+        opaquetoken:
+          client-id: macros-gateway-client
+          client-secret: KgHWIcm429s1Z59x9U6C39tcFlLWBlP5
+          introspection-uri: http://localhost:8070/realms/macros-realm/protocol/openid-connect/token/introspect
+        jwt:
+          jwk-set-uri: http://localhost:8070/realms/macros-realm/protocol/openid-connect/certs
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: password
+      database: food-master-db
+      port: 27017
+      host: localhost
+      auto-index-creation: true
