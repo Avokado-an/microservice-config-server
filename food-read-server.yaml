@@ -31,17 +31,13 @@ spring:
       host: localhost
       auto-index-creation: true
   cloud:
+    function:
+      definition: consumer
     stream:
       bindings:
         consumer-in-0:
           destination: food-write-operation
           consumer:
             use-native-decoding: true
-    kafka:
-      bindings:
-        consumer-out-0:
-          consumer:
-            configuration:
-              value.deserializer: com.bahdanau.food.dto.converter.KafkaMessageDeserializer
       binder:
         brokers: localhost:9092
