@@ -44,10 +44,14 @@ spring:
           uri: lb://PERSON-MACROS-CALCULATION-SERVER
           predicates:
             - Path=/calculate-person/**
-        - id: food-server
-          uri: lb://FOOD-SERVER
+        - id: food-read-server
+          uri: lb://FOOD-READ-SERVER
           predicates:
-            - Path=/food/**
+            - Path=/food/read/**
+        - id: food-write-server
+          uri: lb://FOOD-WRITE-SERVER
+          predicates:
+            - Path=/food/write/**
         - id: client-aim-server
           uri: lb://CLIENT-AIM-SERVER
           predicates:
