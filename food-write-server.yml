@@ -31,13 +31,9 @@ spring:
       host: localhost
       auto-index-creation: true
   cloud:
-    function:
-      definition: producer
     stream:
       bindings:
-        producer-out-0:
+        output:
           destination: food-write-operation
-          producer:
-            use-native-decoding: true
       binder:
         brokers: localhost:9092
