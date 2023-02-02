@@ -37,13 +37,5 @@ spring:
       bindings:
         producer-out-0:
           destination: food-write-operation
-          producer:
-            use-native-decoding: true
-    kafka:
-      bindings:
-        producer-out-0:
-          producer:
-            configuration:
-              value.serializer: com.bahdanau.food.dto.converter.KafkaMessageSerializer
       binder:
         brokers: localhost:9092
