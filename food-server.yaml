@@ -11,7 +11,7 @@ logstash:
 
 spring:
   application:
-    name: food-server
+    name: food-read-server
   security:
     oauth2:
       resourceserver:
@@ -26,7 +26,7 @@ spring:
       authentication-database: admin
       username: root
       password: password
-      database: food-db
+      database: food-slave-db
       port: 27017
       host: localhost
       auto-index-creation: true
