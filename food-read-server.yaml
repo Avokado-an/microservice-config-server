@@ -36,6 +36,7 @@ spring:
     stream:
       bindings:
         consumer-in-0:
+          content-type: application/x-java-object
           destination: food-write-operation
       binder:
         brokers: localhost:9092

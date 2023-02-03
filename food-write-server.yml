@@ -36,6 +36,7 @@ spring:
     stream:
       bindings:
         producer-out-0:
+          content-type: application/JSON
           destination: food-write-operation
       binder:
         brokers: localhost:9092
