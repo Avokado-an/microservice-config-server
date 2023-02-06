@@ -6,6 +6,7 @@ spring:
     openfeign:
       oauth2:
         enabled: true
+        clientRegistrationId: macros-gateway-client
   application:
     name: client-aim-server
   security:
