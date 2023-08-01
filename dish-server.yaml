@@ -30,3 +30,17 @@ spring:
       port: 27017
       host: localhost
       auto-index-creation: true
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: [ "health","prometheus", "metrics" ]
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
